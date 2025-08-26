@@ -1,8 +1,7 @@
 {
-    "type": "generic",
-    "pool": [
+    "pools": [
         {
-            "roll": 1,
+            "rolls": 1,
             "entries": [
                 {
                     "type": "item",
@@ -12,46 +11,19 @@
                             "function": "set_components",
                             "components": {
                                 "minecraft:written_book_content": {
-                                    "author": "Slfftz520(github.com/slfftz2011)",
+                                    "author": "https://github.com/slfftz2011",
                                     "pages": [
-                                        [
-                                            {"text":"你现在使用的是由Slfftz520制作的猎人游戏数据包","color":"gold","bold":true,"font":"minecraft:uniform"},
-                                            {"text":"本数据包适用于Minecraft 1.21版本","color":"dark_green","font":"minecraft:uniform"},
-                                            {"text":"如果该包无法使用，请检查版本是否适配！特别是1.20.6及以下和1.21.4及以上版本！","color":"red","bold":true,"font":"minecraft:uniform"}
-                                        ],
-                                        [
-                                            {"text":"教程：","color":"gold","bold":true,"font":"minecraft:uniform"},
-                                            "",
-                                            {"text":" i.使用本包内置的随机选择方式开始游戏:","color":"purple","bold":true,"font":"minecraft:uniform"},
-                                            {"text":"  本包内置随机选择模式，开始游戏后会使用目标选择器（@r）随机挑选猎物，其余均为猎人","color":"yellow","font":"minecraft:uniform"},
-                                            {"text":"  输入/function hg:start开始游戏","color":"yellow","font":"minecraft:uniform"},
-                                            {"text":"  **注意：该模式只能有一个猎物，且无法自行给定猎物和猎人名单！！！**","color":"red","bold":true,"font":"minecraft:uniform"},
-                                            "",
-                                            {"text":" ii.自定义猎物与猎人名单后开始游戏（未完成，敬请期待）:","color":"purple","bold":true,"font":"minecraft:uniform"},
-                                            {"text":"  自主选定猎人与猎物，可以有多个猎物，选定后开始游戏","color":"yellow","font":"minecraft:uniform"},
-                                            {"text":"  输入/tag <玩家名称或目标选择器> add prey以添加猎物，/tag <玩家名称或目标选择器> add hunter以添加猎人，/function hg:handled_start开始游戏","color":"yellow","font":"minecraft:uniform"},
-                                            {"text":"  **注意：该模式还在制作，无法使用！！！**","color":"red","italic":true,"font":"minecraft:uniform"}
-                                        ],
-                                        [
-                                            {"text":"功能介绍：","color":"gold","bold":true,"font":"minecraft:uniform"},
-                                            {"text":" i.死亡计数：纪录所有玩家死亡次数","color":"aqua","font":"minecraft:uniform"},
-                                            {"text":" ii.血量显示：玩家列表（Tab键）和玩家头顶会显示血量","color":"aqua","font":"minecraft:uniform"},
-                                            {"text":" iii.友伤关闭：猎物之间和猎人之间无法直接伤害","color":"aqua","font":"minecraft:uniform"},
-                                            {"text":" iv.隐身显示：猎物之间和猎人之间可以看见隐身的队友","color":"aqua","font":"minecraft:uniform"},
-                                            {"text":" v.名称：猎物名称为绿色且带有[猎物]标签，猎人名称为红色且带有[猎人]标签","color":"aqua","font":"minecraft:uniform"},
-                                            {"text":" vi.猎人高亮：猎人将会发光","color":"aqua","font":"minecraft:uniform"},
-                                            {"text":" vii.猎人指南针：猎人拥有一个永远指向猎物的指南针，且在丢失后给予，在背包内按快捷键可调节位置","color":"aqua","font":"minecraft:uniform"},
-                                            {"text":" viii.游戏结束：当任意猎物击杀末影龙或猎物全部死亡，游戏结束，全员旁观者模式并显示赢家","color":"aqua","font":"minecraft:uniform"},
-                                            {"text":" ix.可重复游玩：字面意思","color":"aqua","font":"minecraft:uniform"}
-                                        ],
-                                        [
-                                            {"text":"本包由Slfftz520制作，未经允许禁止二次分发！","color":"red","bold":true,"font":"minecraft:uniform"},
-                                            {"text":"网址:https://github.com/slfftz2011","color":"blue","italic":true,"font":"minecraft:uniform"}
-                                        ]
+                                        "[\"\", {\"text\":\"你现在使用的是由Slfftz520制作的猎人游戏数据包\n\n\",\"color\":\"gold\",\"bold\":true,\"font\":\"minecraft:uniform\"}, {\"text\":\"本数据包适用于Minecraft1.21版本\n\n\",\"color\":\"dark_green\",\"font\":\"minecraft:uniform\"}, {\"text\":\"如果该包无法使用，请检查版本是否适配！\n特别是1.20.6及以下和1.21.4及以上版本！\n\",\"color\":\"red\",\"bold\":true,\"font\":\"minecraft:uniform\"}]",
+                                        "[\"\", {\"text\":\"教程：\n\",\"color\":\"gold\",\"bold\":true,\"font\":\"minecraft:uniform\"},{\"text\":\"i.使用本包内置的随机选择方式开始游戏:\n\",\"color\":\"light_purple\",\"bold\":true,\"font\":\"minecraft:uniform\"}, {\"text\":\"本包内置随机选择模式，开始游戏后会使用目标选择器（@r）随机挑选猎物，其余均为猎人\n输入/function hg:start开始游戏\n\",\"color\":\"dark_blue\",\"font\":\"minecraft:uniform\"}, {\"text\":\"**注意：该模式只能有一个猎物，且无法自行给定猎物和猎人名单！！！**\n\",\"color\":\"red\",\"bold\":true,\"font\":\"minecraft:uniform\"}]",
+                                        "[\"\", {\"text\":\"ii.自定义猎物与猎人名单后开始游戏（未完成，敬请期待）:\n\",\"color\":\"light_purple\",\"bold\":true,\"font\":\"minecraft:uniform\"}, {\"text\":\"自主选定猎人与猎物，可以有多个猎物，选定后开始游戏\n输入/tag <玩家名称或目标选择器> add prey以添加猎物，/tag <玩家名称或目标选择器> add hunter以添加猎人，/function hg:handled_start开始游戏\n\",\"color\":\"dark_blue\",\"font\":\"minecraft:uniform\"}, {\"text\":\"**注意：该模式还在制作，无法使用！！！**\n\",\"color\":\"red\",\"italic\":true,\"font\":\"minecraft:uniform\"}]",
+                                        "[\"\", {\"text\":\"功能介绍：\n\",\"color\":\"gold\",\"bold\":true,\"font\":\"minecraft:uniform\"}, {\"text\":\" i.死亡计数：纪录所有玩家死亡次数\n ii.血量显示：玩家列表（Tab键）和玩家头顶会显示血量\n iii.友伤关闭：猎物之间和猎人之间无法直接伤害\n\",\"color\":\"blue\",\"font\":\"minecraft:uniform\"}]",
+                                        "[\"\", {\"text\":\" iv.隐身显示：猎物之间和猎人之间可以看见隐身的队友\n v.名称：猎物名称为绿色且带有[猎物]标签，猎人名称为红色且带有[猎人]标签\n\nvi.猎人高亮：猎人将会发光\n\",\"color\":\"blue\",\"font\":\"minecraft:uniform\"}]",
+                                        "[\"\", {\"text\":\" vii.猎人指南针：猎人拥有一个永远指向猎物的指南针，且在丢失后给予，在背包内按快捷键可调节位置\n viii.游戏结束：当任意猎物击杀末影龙或猎物全部死亡，游戏结束，全员旁观者模式并显示赢家\n\nix.可重复游玩：字面意思\",\"color\":\"blue\",\"font\":\"minecraft:uniform\"}]",
+                                        "[\"\", {\"text\":\"本包由Slfftz520制作，未经允许禁止二次分发！\n\",\"color\":\"red\",\"bold\":true,\"font\":\"minecraft:uniform\"}, {\"text\":\"[https://github.com/slfftz2011]<-点击此处\",\"color\":\"blue\",\"bold\":true,\"italic\":true,\"font\":\"minecraft:uniform\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://github.com/slfftz2011\"}}]"
                                     ],
-                                    "title": "欢迎使用Hunter Game数据包！"
+                                    "title": "欢迎使用HunterGame数据包！"
                                 },
-                                "minecraft:custom_name": "{\"text\":\"说明\",\"color\":\"yellow\",\"bold\":true}"
+                                "minecraft:custom_name": "{\"text\":\"欢迎使用HunterGame数据包！\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}"
                             }
                         }
                     ]
