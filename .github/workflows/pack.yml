@@ -62,14 +62,14 @@ jobs:
         run: |
           TAG="${{ env.TAG }}"
           SUFFIX="${{ steps.set_tag.outputs.hotfix_suffix }}"
-          echo "asset_datapack=HunterGame-${TAG}${SUFFIX}.zip" >> $GITHUB_OUTPUT
+          echo "asset_datapack=HunterGame-${VERSION}${SUFFIX}.zip" >> $GITHUB_OUTPUT
 
       - name: 打包数据包
         run: python pack.py --data --no-compat
 
       - name: 重命名产物（热修复时添加后缀）
         run: |
-          mv "output/HunterGame-Data-general-${{ env.TAG }}.zip" "output/${{ steps.set_asset_name.outputs.asset_datapack }}"
+          mv "output/HunterGame-Data-general-${{ env.VERSION }}.zip" "output/${{ steps.set_asset_name.outputs.asset_datapack }}"
 
       - name: 创建/更新 Release
         uses: ncipollo/release-action@v1.14.0
