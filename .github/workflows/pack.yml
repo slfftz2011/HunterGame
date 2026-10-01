@@ -87,7 +87,7 @@ jobs:
             ### 📦 下载
             | 文件 | 说明 |
             |------|------|
-            | `HunterGame-${{ env.TAG }}.zip` | HunterGame 数据包，放入 `saves/<存档>/datapacks/` 即可 |
+            | `HunterGame-${{ env.VERSION }}.zip` | HunterGame 数据包，放入 `saves/<存档>/datapacks/` 即可 |
 
             ### 🎮 游戏规则
             - 1 名猎物 vs 其余猎人
