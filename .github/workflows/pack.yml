@@ -68,7 +68,7 @@ jobs:
 
       - name: 重命名产物
         run: |
-          mv "output/HunterGame-Data-general-${{ env.VERSION }}.zip" "output/${{ steps.set_asset_name.outputs.asset_datapack }}"
+          mv "output/HunterGame-Data-${{ env.VERSION }}-general.zip" "output/${{ steps.set_asset_name.outputs.asset_datapack }}"
 
       - name: 创建/更新 Release
         uses: ncipollo/release-action@v1.14.0
