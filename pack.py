@@ -335,17 +335,17 @@ def main():
     if args.data or args.all:
         # 通用版（移除 data/c/）
         if not args.no_generic:
-            data_generic_zip = Path(OUTPUT_DIR) / f"Age-Data-{version}-generic.zip"
+            data_generic_zip = Path(OUTPUT_DIR) / f"HunterGame-Data-{version}-generic.zip"
             pack_data(src_dir, str(data_generic_zip), macros, filter_c=True)
 
         # 兼容版（保留 data/c/）
         if not args.no_compat:
-            data_compat_zip = Path(OUTPUT_DIR) / f"Age-Data-{version}-compat.zip"
+            data_compat_zip = Path(OUTPUT_DIR) / f"HunterGame-Data-{version}-compat.zip"
             pack_data(src_dir, str(data_compat_zip), macros, filter_c=False)
 
     # ===== 资源包 =====
     if args.resource or args.all:
-        resource_zip = Path(OUTPUT_DIR) / f"Age-Assets-{version}.zip"
+        resource_zip = Path(OUTPUT_DIR) / f"HunterGame-Assets-{version}.zip"
         pack_resource(src_dir, str(resource_zip), macros)
 
 
