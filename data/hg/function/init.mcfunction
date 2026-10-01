@@ -6,6 +6,7 @@ scoreboard players set $state GAME_STATE 0
 #创建死亡次数计分板
 scoreboard objectives add DEATH deathCount {"text":"狗带榜", "color":"aqua"}
 scoreboard objectives setdisplay sidebar DEATH
+scoreboard objectives add DRAGON_STATE dummy
 #创建血量计分板
 scoreboard objectives add HP health
 scoreboard objectives setdisplay list
