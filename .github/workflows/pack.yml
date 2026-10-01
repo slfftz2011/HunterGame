@@ -36,7 +36,7 @@ jobs:
         id: get_version
         run: |
           VERSION=$(python -c "import yaml; print(yaml.safe_load(open('defines.yml'))['VERSION'])")
-          TAG=$(python -c "import yaml; print(yaml.safe_load(open('defines.yml'))['TAG'])")
+          TAG="v${VERSION}"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "tag=$TAG" >> $GITHUB_OUTPUT
           echo "VERSION=$VERSION" >> $GITHUB_ENV
@@ -46,7 +46,6 @@ jobs:
         id: set_tag
         run: |
           TAG="${{ env.TAG }}"
-          echo "tag=$TAG" >> $GITHUB_OUTPUT
           SHORT_HASH=$(git rev-parse --short=7 HEAD)
           echo "short_hash=$SHORT_HASH" >> $GITHUB_OUTPUT
           if git rev-parse "$TAG" >/dev/null 2>&1; then
@@ -62,12 +61,12 @@ jobs:
         run: |
           TAG="${{ env.TAG }}"
           SUFFIX="${{ steps.set_tag.outputs.hotfix_suffix }}"
-          echo "asset_datapack=HunterGame-${VERSION}${SUFFIX}.zip" >> $GITHUB_OUTPUT
+          echo "asset_datapack=HunterGame-${TAG}${SUFFIX}.zip" >> $GITHUB_OUTPUT
 
       - name: 打包数据包
         run: python pack.py --data --no-compat
 
-      - name: 重命名产物（热修复时添加后缀）
+      - name: 重命名产物
         run: |
           mv "output/HunterGame-Data-general-${{ env.VERSION }}.zip" "output/${{ steps.set_asset_name.outputs.asset_datapack }}"
 
@@ -75,10 +74,10 @@ jobs:
         uses: ncipollo/release-action@v1.14.0
         with:
           artifacts: "output/${{ steps.set_asset_name.outputs.asset_datapack }}"
-          tag: ${{ steps.set_tag.outputs.tag }}
-          name: "Pre-Release ${{ env.TAG }}"
+          tag: ${{ env.TAG }}
+          name: "${{ env.TAG }}"
           body: |
-            ## 🧪 Pre-Release ${{ env.TAG }}
+            ## ${{ env.TAG }}
 
             **触发方式**: ${{ github.event_name == 'schedule' && '每日定时构建' || '手动触发' }}
             **提交**: [${{ steps.set_tag.outputs.short_hash }}](https://github.com/${{ github.repository }}/commit/${{ github.sha }})
